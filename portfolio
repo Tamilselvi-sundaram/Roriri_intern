@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>My Portfolio</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+    <!-- Intro Section -->
+    <section id="home" class="intro">
+      <div class="profile">
+        <img src="images/profile pic.jpeg" alt="S. TAMILSELVISHANMUGASUNDARAM" class="profile-img" >
+      </div>
+      <h1>Hi, I'm Tamilselvishanmugasundaram</h1>
+      <p>Welcome to my portfolio! I'm a passionate web developer</p>
+      <button onclick="location.href='#projects'">See My Work</button>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm Tamilselvishanmugasundaram , a passionate web developer skilled in HTML, CSS, JavaScript, and React.</p>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+      </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <h2>My Projects</h2>
+      <div class="project">
+        <h3>Project 1</h3>
+        <p>A brief description of Project 1.</p>
+        <button>View Project</button>
+      </div>
+      <div class="project">
+        <h3>Project 2</h3>
+        <p>A brief description of Project 2.</p>
+        <button>View Project</button>
+      </div>
+      <div class="project">
+        <h3>Project 3</h3>
+        <p>A brief description of Project 3.</p>
+        <button>View Project</button>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/tamilselvi-s/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Tamilselvi-sundaram" target="_blank">GitHub</a>
+    </div>
+    <p>© 2024 Tamilselvishanmugasundaram. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+<!--css-->
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7f6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #e55b00;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  padding: 15px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar .logo h1 {
+  color: #fff;
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ff6600;
+}
+
+/* Main Section */
+main {
+  padding: 40px 20px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.profile {
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.intro h1 {
+  font-size: 45px;
+  margin-top: 20px;
+  color: #333;
+}
+
+.intro p {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.intro button {
+  background-color: #ff6600;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.intro button:hover {
+  background-color: #e55b00;
+}
+
+/* About Section */
+.about {
+  text-align: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.about ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.about ul li {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Projects Section */
+.projects {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.projects h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.project {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.project h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.project button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.project button:hover {
+  background-color: #ff6600;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #fff;
+  padding: 40px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.contact button {
+  background-color: #ff6600;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 5px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.contact button:hover {
+  background-color: #e55b00;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer .social-icons a {
+  color: #fff;
+  font-size: 18px;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+  color: #ff6600;
+}
+
+footer p {
+  margin-top: 10px;
+  font-size: 14px;
+}
