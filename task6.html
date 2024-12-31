@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Product Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        header nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header nav ul li {
+            margin: 0 1rem;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        header nav .buy-now {
+            background: #f39c12;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        header nav .buy-now:hover {
+            background: #e67e22;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('https://thumbs.dreamstime.com/b/soft-pastel-smoky-gradient-background-featuring-smooth-transitions-colors-foggy-colorful-wallpaper-delicate-blend-323762478.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            background: linear-gradient(to right, #f39c12, #e67e22);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .features {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .features .feature {
+            text-align: center;
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery {
+            padding: 2rem 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .product-showcase {
+            padding: 2rem 1rem;
+            background: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .product-showcase img {
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-description {
+            max-width: 500px;
+        }
+
+        .product-description h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-description p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .testimonials {
+            padding: 2rem 1rem;
+            background: #333;
+            color: #fff;
+        }
+
+        .testimonials .testimonial {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .pricing {
+            padding: 2rem 1rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .pricing .plan {
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing .popular {
+            border: 2px solid #f39c12;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Camera Store</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="buy-now">Buy Now</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Capture Every Moment</h1>
+    </section>
+
+    <section class="features" id="features">
+        <div class="feature">
+            <h3>High-Resolution Images</h3>
+            <p>Experience crystal-clear clarity with our advanced camera technology.</p>
+        </div>
+        <div class="feature">
+            <h3>Lightweight & Portable</h3>
+            <p>Take it anywhere and capture every adventure effortlessly.</p>
+        </div>
+        <div class="feature">
+            <h3>Long-Lasting Battery</h3>
+            <p>Enjoy extended usage with our high-performance battery life.</p>
+        </div>
+        <div class="feature">
+            <h3>4K Video Recording</h3>
+            <p>Record ultra-high-definition videos with cinematic quality.</p>
+        </div>
+    </section>
+
+    <section class="product-showcase">
+        <img src="images/product.jpg" alt="Camera">
+        <div class="product-description">
+            <h2>Professional Camera</h2>
+            <p>Discover the perfect camera designed for both enthusiasts and professionals. With its exceptional image quality, durability, and cutting-edge features, it’s the ideal choice for capturing every special moment. Take your photography to the next level today!</p>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <img src="images/product1.jpg" alt="Camera Shot 1">
+        <img src="images/product2.jpg" alt="Camera Shot 2">
+        <img src="images/product3.jpg" alt="Camera Shot 3">
+    </section>
+
+    <section class="testimonials">
+        <div class="testimonial">
+            <p>"This camera has exceeded my expectations in every way. Highly recommended!"</p>
+        </div>
+        <div class="testimonial">
+            <p>"A perfect tool for both personal and professional photography."</p>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="plan">
+            <h3>Basic</h3>
+            <p>$299</p>
+        </div>
+        <div class="plan popular">
+            <h3>Pro</h3>
+            <p>$499</p>
+        </div>
+        <div class="plan">
+            <h3>Enterprise</h3>
+            <p>Contact us for pricing</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Camera Store. All rights reserved. <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
