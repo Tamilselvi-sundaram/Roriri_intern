@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services Section</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .services-section {
+      text-align: center;
+      padding: 2rem;
+      background-color: #f9f9f9;
+    }
+
+    .services-section h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .services-section p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .service-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      flex: 1 1 calc(33.33% - 1rem);
+      max-width: calc(33.33% - 1rem);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .service-card:hover {
+      transform: scale(1.05);
+      background-color: #f0f8ff;
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #007BFF;
+    }
+
+    .service-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    .service-description {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Ensures cards adapt on very small screens */
+    @media (max-width: 768px) {
+      .service-card {
+        flex: 1 1 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .service-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <section class="services-section">
+    <h1>Our Services</h1>
+    <p>We offer a range of services to meet your needs</p>
+    <div class="services-container">
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-code"></i></div>
+        <div class="service-title">Web Development</div>
+        <div class="service-description">Build modern and responsive websites tailored to your needs.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+        <div class="service-title">Graphic Design</div>
+        <div class="service-description">Create visually stunning designs for your brand and products.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+        <div class="service-title">App Development</div>
+        <div class="service-description">Develop seamless and user-friendly mobile applications.</div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
