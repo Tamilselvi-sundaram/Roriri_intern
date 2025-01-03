@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="task10.css">
+</head>
+<body>
+    <div class="clock-container">
+        <div id="time" class="time"></div>
+        <div id="date" class="date"></div>
+    </div>
+    <script src="task10.js"></script>
+</body>
+</html>
+
+
+<!--Css File-->
+/* style.css */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+}
+
+.clock-container {
+    text-align: center;
+    padding: 20px 40px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.time {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.date {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #dcdcdc;
+}
+
+
+<!--Js File -->
+function updateClock() {
+    const now = new Date();
+
+    // Format time as HH:MM:SS
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const timeString = `${hours}:${minutes}:${seconds}`;
+
+    // Format date as DD-MM-YYYY
+    const day = String(now.getDate()).padStart(2, '0');
+    const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+    const year = now.getFullYear();
+    const dateString = `${day}-${month}-${year}`;
+
+   
+    document.getElementById('time').textContent = timeString;
+    document.getElementById('date').textContent = dateString;
+}
+
+
+setInterval(updateClock, 1000);
+
+
+updateClock();
